@@ -17,3 +17,6 @@ By leveraging Neo4j and Cypher queries, the project allows users to:
 - Explore biological relationships through query-based insights.
 
 - Extend the graph using real datasets like DisGeNET or DrugBank.
+
+Install Dependencies
+pip install --only-binary=:all: -r requirements311.txt
