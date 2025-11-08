@@ -18,5 +18,28 @@ By leveraging Neo4j and Cypher queries, the project allows users to:
 
 - Extend the graph using real datasets like DisGeNET or DrugBank.
 
-Install Dependencies
-pip install --only-binary=:all: -r requirements311.txt
+```
+disease-gene-knowledge-graph/
+│
+├── inputs/
+│   ├── Asthma_embeddings.csv
+│   ├── disgenet_sample.csv
+│   └── embeddings_node2vec.csv
+│
+├── outputs/
+│   └── disease_association.csv
+│
+├── scripts/
+│   ├── embeddings_node2vec.py
+│   ├── graph_style.json
+│   ├── link_prediction_demo.py
+│   ├── load_neo4j.py
+│   ├── nearest_neighbors.py
+│   └── visualization_codes.txt
+│
+├── requirements.txt
+├── requirements311.txt      # (Implied from Dockerfile, not shown explicitly)
+├── docker_compose.yml
+├── Dockerfile.txt
+├── README.md
+```
