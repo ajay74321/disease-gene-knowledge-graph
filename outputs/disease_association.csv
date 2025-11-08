@@ -1,0 +1,11 @@
+﻿d.name,r.score,g.symbol
+Type 2 diabetes mellitus,0.78,TCF7L2
+Type 2 diabetes mellitus,0.64,SLC30A8
+Breast carcinoma,0.9,BRCA1
+Breast carcinoma,0.88,BRCA2
+Rheumatoid arthritis,0.73,PTPN22
+Rheumatoid arthritis,0.81,HLA-DRB1
+Alzheimer's disease,0.92,APOE
+Alzheimer's disease,0.75,APP
+Asthma,0.66,IL13
+Asthma,0.69,IL4
