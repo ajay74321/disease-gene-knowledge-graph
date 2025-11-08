@@ -117,12 +117,6 @@ This project is licensed under the MIT License.
 
 ---
 
-## ✍️ Acknowledgements
-
-This work was carried out at the Bioinformatics Centre, Savitribai Phule Pune University as part of an M.Sc. in Bioinformatics under the guidance of Dr. Abhijeet Kulkarni, with co-guides Dr. Manali Joshi, Dr. Payel Ghosh, and Mrs. Smita Saxena.
-
----
-
 ## About
 
 An interactive Python/Neo4j-based network for exploring therapeutic and molecular relationships.  
