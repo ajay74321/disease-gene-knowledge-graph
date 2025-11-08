@@ -50,6 +50,16 @@ disease-gene-knowledge-graph/
 pip install -r requirements.txt
 ```
 
+## 📦 Inputs
+
+Source files and datasets used to build the knowledge graph:
+
+- `inputs/disgenet_sample.csv` — Curated list of disease-gene associations (from DisGeNET).
+- `inputs/Asthma_embeddings.csv` — Precomputed nearest-neighbor disease embeddings for Asthma.
+- `inputs/embeddings_node2vec.csv` — Node2Vec embeddings for all diseases and genes (used for similarity and link prediction).
+
+These files are required for ETL, graph construction, and downstream analyses.
+
 ### Launch Neo4j (Recommended: Docker Compose)
 
 Start the Neo4j database locally using [Docker Compose](docker_compose.yml):
@@ -100,14 +110,15 @@ For more example queries, see [`scripts/visualization_codes.txt`](scripts/visual
 
 ---
 
-## 📦 Output
+## 📤 Outputs
 
-Typical outputs include:
+Files generated during analysis and predictions:
 
-- `outputs/disease_association.csv` – Disease–gene associations and scores
-- `inputs/embeddings_node2vec.csv` – Node2Vec embeddings for nodes
-- `outputs/nearest_disease.csv` – Most similar diseases by embedding
-- `outputs/candidate_genes.csv` – Predicted gene targets by similarity
+- `outputs/disease_association.csv` — Matrix of disease–gene associations with scores (from Neo4j or ETL scripts).
+- `outputs/nearest_disease.csv` — List of similar diseases for a target (e.g., Asthma), generated using embedding-based nearest neighbor search.
+- `outputs/candidate_genes.csv` — Candidate genes for a disease, predicted by link prediction algorithms.
+
+Output files provide actionable results and can be visualized using Neo4j Browser or imported to network analysis software.
 
 ---
 
