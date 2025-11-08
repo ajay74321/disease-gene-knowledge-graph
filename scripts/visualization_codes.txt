@@ -1,0 +1,62 @@
+To visualize your **disease–gene knowledge graph** in **Neo4j Browser**, you can use a simple Cypher query like this:
+
+```cypher
+MATCH (d:Disease)-[r:ASSOCIATES_WITH]->(g:Gene)
+RETURN d, r, g
+LIMIT 100;
+```
+
+### Explanation:
+
+* `MATCH (d:Disease)-[r:ASSOCIATES_WITH]->(g:Gene)`
+  Finds all diseases (`d`) connected to genes (`g`) via the relationship `ASSOCIATES_WITH`.
+* `RETURN d, r, g`
+  Returns nodes and relationships so Neo4j Browser can visualize them as a graph.
+* `LIMIT 100`
+  Prevents the graph from overloading your screen with too many nodes.
+
+---
+
+### Alternative visualization queries:
+
+If you want to explore different parts of the graph:
+
+1. **All diseases and related genes**
+
+   ```cypher
+   MATCH (d:Disease)-[:ASSOCIATES_WITH]->(g:Gene)
+   RETURN d, g
+   LIMIT 50;
+   ```
+
+2. **Single disease focus**
+
+   ```cypher
+   MATCH (d:Disease {name: "Asthma"})-[r:ASSOCIATES_WITH]->(g:Gene)
+   RETURN d, r, g;
+   ```
+
+3. **Genes connected to multiple diseases**
+
+   ```cypher
+   MATCH (g:Gene)<-[:ASSOCIATES_WITH]-(d:Disease)
+   WITH g, count(d) AS numDiseases
+   WHERE numDiseases > 2
+   MATCH (g)<-[r:ASSOCIATES_WITH]-(d)
+   RETURN g, r, d
+   LIMIT 50;
+   ```
+
+4. **Interactive exploration (start with one disease)**
+
+   ```cypher
+   MATCH (d:Disease {name: "Diabetes"})-[r*1..2]-(n)
+   RETURN d, r, n;
+   ```
+
+   This explores up to two levels of relationships from the disease "Diabetes."
+
+---
+
+Would you like me to help you write a **custom query** that matches how your dataset is structured (e.g., `Disease`, `Gene`, `Pathway`, etc.)?
+If you paste a few sample node labels and relationship types from your Neo4j database (`CALL db.schema.visualization();` output), I can tailor the exact Cypher query for you.

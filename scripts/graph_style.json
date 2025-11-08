@@ -1,0 +1,14 @@
+{
+  "node": {
+    "Drug": {"color": "#8e44ad", "size": 50, "caption": "name"},
+    "Gene": {"color": "#3498db", "size": 40, "caption": "symbol"},
+    "Disease": {"color": "#e74c3c", "size": 55, "caption": "name"},
+    "Pathway": {"color": "#2ecc71", "size": 45, "caption": "name"}
+  },
+  "relationship": {
+    "TARGETS": {"color": "#9b59b6", "thickness": 3},
+    "TREATS": {"color": "#f39c12", "thickness": 3},
+    "ASSOCIATED_WITH": {"color": "#7f8c8d", "thickness": 2},
+    "PART_OF": {"color": "#16a085", "thickness": 2}
+  }
+}
