@@ -37,8 +37,7 @@ disease-gene-knowledge-graph/
 │   ├── nearest_neighbors.py
 │   └── visualization_codes.txt
 │
-├── requirements.txt
-├── requirements311.txt      # (Implied from Dockerfile, not shown explicitly)
+├── requirements.txt     # (Implied from Dockerfile, not shown explicitly)
 ├── docker_compose.yml
 ├── Dockerfile.txt
 ├── README.md
